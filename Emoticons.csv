@@ -1,0 +1,75 @@
+Emoticons,Meaning,Sentiment,Score
+<3,Heart,Positive,3
+:_),Smiley or Happy face,Positive,3
+:),Smiley or Happy face,Positive,3
+:-],Smiley or Happy face,Positive,3
+:],Smiley or Happy face,Positive,3
+:-3,Smiley or Happy face,Positive,3
+:3,Smiley or Happy face,Positive,3
+:->,Smiley or Happy face,Positive,3
+:>,Smiley or Happy face,Positive,3
+8-),Smiley or Happy face,Positive,3
+8),Smiley or Happy face,Positive,3
+:-},Smiley or Happy face,Positive,3
+:},Smiley or Happy face,Positive,3
+:o),Smiley or Happy face,Positive,3
+:c),Smiley or Happy face,Positive,3
+:^),Smiley or Happy face,Positive,3
+=],Smiley or Happy face,Positive,3
+=),Smiley or Happy face,Positive,3
+:_D,Laughing,Positive,5
+:D,Laughing,Positive,5
+8_D,Laughing,Positive,5
+8D,Laughing,Positive,5
+x_D,Laughing,Positive,5
+xD,Laughing,Positive,5
+X_D,Laughing,Positive,5
+XD,Laughing,Positive,5
+"""=3""",Laughing,Positive,5
+B^D,Laughing,Positive,5
+:-)),Very Happy,Positive,6
+:_(,"Frown,Sad,angry,pouting",Negative,-3
+:(,"Frown,Sad,angry,pouting",Negative,-3
+:_c,"Frown,Sad,angry,pouting",Negative,-3
+:c,"Frown,Sad,angry,pouting",Negative,-3
+:_<,"Frown,Sad,angry,pouting",Negative,-3
+:<,"Frown,Sad,angry,pouting",Negative,-3
+:_[,"Frown,Sad,angry,pouting",Negative,-3
+:[,"Frown,Sad,angry,pouting",Negative,-3
+:-||,"Frown,Sad,angry,pouting",Negative,-3
+>:[,"Frown,Sad,angry,pouting",Negative,-3
+:{,"Frown,Sad,angry,pouting",Negative,-3
+:@,"Frown,Sad,angry,pouting",Negative,-3
+>:(,"Frown,Sad,angry,pouting",Negative,-3
+:'_(,"Horror,Disgust,Sadness,Great dismay,",,-5
+:'(,"Horror,Disgust,Sadness,Great dismay,",,-5
+:'_),"Horror,Disgust,Sadness,Great dismay,",,-5
+:'),"Horror,Disgust,Sadness,Great dismay,",,-5
+D_':,"Horror,Disgust,Sadness,Great dismay,",,-5
+D:<,"Horror,Disgust,Sadness,Great dismay,",,-5
+D:,"Horror,Disgust,Sadness,Great dismay,",,-5
+D8,"Horror,Disgust,Sadness,Great dismay,",,-5
+D;,"Horror,Disgust,Sadness,Great dismay,",,-5
+D=,"Horror,Disgust,Sadness,Great dismay,",,-5
+DX,"Horror,Disgust,Sadness,Great dismay,",,-5
+|;_),Cool,Positive,4
+|_O,Cool,Positive,4
+:P,,Positive,4
+:_|,Straight face,Neutral,2
+:|,Straight face,Neutral,2
+|;_),Cool,Positive,4
+|_O,Cool,Positive,4
+:_P,Payful/Cheeky,Positive,4
+X_P,Payful/Cheeky,Positive,4
+XP,Payful/Cheeky,Positive,4
+x_p,Payful/Cheeky,Positive,4
+xp,Payful/Cheeky,Positive,4
+:_p,Payful/Cheeky,Positive,4
+:__,Payful/Cheeky,Positive,4
+:_,Payful/Cheeky,Positive,4
+:__,Payful/Cheeky,Positive,4
+:_,Payful/Cheeky,Positive,4
+:_b,Payful/Cheeky,Positive,4
+:b,Payful/Cheeky,Positive,4
+d:,Payful/Cheeky,Positive,4
+>:P,Payful/Cheeky,Positive,4

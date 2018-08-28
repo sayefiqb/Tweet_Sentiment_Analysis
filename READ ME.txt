@@ -1,0 +1,93 @@
+*********************************************************************************************************
+*   Tweet Sentiment Analysis User Guide For Tweet Text Processing and Sentiment Orientation Calculations*	
+*	Acknowledgement- SNW, Polarity Lexicon and General Inquirer, Weka ML Tool, Java, Eclipse and Excel 	*
+*	Analyst Sayef Iqbal, Undergraduate, St. John's University, Course- CUS-1194- Information Retrieval. *									
+*	Please read the following guidline in order to understand the process used to clean, measure and    *
+*   analyse the tweets obtained by Fazel Keshtkar, PhD. Assistant Professor, Computer Science Department*
+*   CPS, St. John's University.																			*	
+*	Contact- sayef.iqbal16@stjohns.edu or sayefiqbal007@gmail.com										*
+*********************************************************************************************************
+
+Step-1 (Pre-processing Tweet Text and converting them into Bag of Words to perform Classification)
+---------------------------------------------------------------------------------------------------------
+First, the tweet data collected in the .arff format was converted from string to word vector using the 
+Weka machine learning tool. Some terms (words) such as numbers and punctuation marks were removed from 
+the bag of words on order to collect meaningful clean data. Weka has a built in stopword remover and Rainbow 
+stemme which is a standard stemmer for text processing in Weka. Both stopword remover and Rainbow stemmer
+was used to get the TF-IDF, Bi-Gram and Tri-Gram weight for the whole document. The TF-IDF weight, Bi-Gram 
+and Tri-gram file were exported as csv file. From there the aggregate weight of the terms in each tweet was 
+calculated. The total TF-IDF, Bi-Gram and Tri-Gram weight were measured and recorded for each document
+(document id). Some classifiers (J48, Naive Bayes, SMO and Random Forest were performed on the BOW tweet file
+but the highes accuracy achieved by these features were 37.51% only. So further analysis and measurements 
+were needed.
+
+Initial Features Considered
+---------------------------
+TFIDF Score	
+Bi-Gram_Score
+Tri-Gram_Score
+Sentiment
+
+These features gave a best accuracy of 45.4434% but a very poor precision of 0.207. Which is why further analysis 
+was required and so a deeper understanding of other sentiment features was important to look at. The result for 
+these features are provided in the folder with BOW-Result folder.
+
+Step-2 (Selection of features and understanding the sentiment for tweets)
+---------------------------------------------------------------------------------------------------------
+Three lexicons were used in this sentiment analysis project. General Inquire, Polarity Lexicon and 
+SentiNetWord Lexicon. All the lexicons were first stemmed using Porter Stemmer. All the words in the tweet
+(unprocessed tweet text file) were also stemmed using Porter stemmer. For each lexicon file the number of 
+matching positive, negative, neutral and objective words were counted. The number of unidentified words were
+also counted as a feature representation. At the end all the number of positive, negative, neutral and objective
+and unidentified words were calculated for each of the lexicons described above. Secondly, for General Inquire
+and Polarity Lexicon, a positive score was +3, negative was -3, neutral 0 and objective 0 was used to score the
+overall sentiment level of the tweet itself. However, since SNW weight/score were low when compared to other 
+lexicons, it was multiplied by 10 in order to scale it to match the other lexicon measurement scale. 
+Similarly, the number of hashtags were measured in a tweet. The word in fornt of the hashtag was matched with
+the General Inquirer in order to understand whether the word is a negative word or positive word. A positive word
+got a +3 score whereas a negative word got a -3 score. If it did not match anything or if the word was neutral 
+then it was given a +1 score just for the sake of the hash tag. Also, the number of exclamation mark was counted
+and it was normalized by dividing the number of exclamation mark with 15 (max exclamation marks) and then 
+multiplying it with final score which is the average of the final score for General Inquirer and Polarity Lexicon
+score. The SentiWordNet score each tweet was then added to the final score as a new feature. Also, last but not the
+least, the emojis in the tweets were matched with a list of tweets that were scored based on their meaning and 
+sentiment value. The resultant of all the score was the final score that decided whether a tweet invoked positive
+negative, neutral or objective sentiment. Two models were crated with the consideration of these features. Model A 
+had 24 features whereas Model B had 13 features. The attributes for each of the Model are shown below.
+
+              Model A										Model B
+              -----------------------						-----------------------									
+			  TFIDF Score								    TFIDF Score			
+              Total_Number_of_Words							SNW-Score
+              Positive_Word_Count-GI						Emoticons_Score
+              Negative_Word_Count-GI						Adjective_Score
+              Neutral_Word_Count-GI							Gi-Score
+              Objective_Word_Count-GI						Polarity-Score
+              Unidentified_Word_Count-GI					Final-Score
+              Positive_Word_Count-Polarity					Exclamation_Score
+              Negative_Word_Count-Polarity					Final_Score_With_SNW	
+              Neutral_Word_Count-Polarity				    Bi-Gram_Score	
+              Unidentified_Word_Count-Polarity				Tri-Gram_Score	
+              SNW-Score										NewHashTagScore
+              Emoticons_Score								Sentiment
+              Exclamation_Count
+              Adjective_Score
+              Gi-Score
+              Polarity-Score
+              Final-Score
+              Exclamation_Score
+              Final_Score_With_SNW
+              Bi-Gram_Score
+              Tri-Gram_Score
+              NewHashTagScore
+              Sentiment
+              
+Four classifier (J48, Naive Bayes, SMO and Random Forest) algorithm with (66% for training, 90 % for training, 10 fold 
+cross validation and 5-fold cross validation) conditions were done on these models. The result for the classifiers 
+for ModelA is in ModelA-Result folder and the result for ModelB is in ModelB-Result folder.
+              
+              
+              
+              
+              
+              
